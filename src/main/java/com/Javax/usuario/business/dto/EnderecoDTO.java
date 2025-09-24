@@ -2,6 +2,7 @@ package com.Javax.usuario.business.dto;
 
 import lombok.*;
 
+@Builder
 @Getter
 @Setter
 @NoArgsConstructor

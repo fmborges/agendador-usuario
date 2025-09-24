@@ -20,21 +20,21 @@ public class UsuarioConverter {
                 .senha(usuarioDTO.getSenha())
                 .email(usuarioDTO.getEmail())
                 .telefones(paraListaTelefone(usuarioDTO.getTelefone()))
-                .enderecos(paraListaEndereco(usuarioDTO.getEndereco()))
+                .enderecos(paraListaEndereco(usuarioDTO.getEnderecos()))
 
                 .build();
     }
 
 
     public List<Endereco> paraListaEndereco(List<EnderecoDTO> enderecoDTOS){
-        return enderecoDTOS.stream().map(this::paraEndereco).toList();
-        /*
         List<Endereco> enderecos = new ArrayList<>();
-        for(EnderecoDTO enderecoDTO : enderecoDTOS){
-           enderecos.add(paraEndereco(enderecoDTO));
-           }
-           return enderecos;
-         */
+        if (enderecoDTOS != null) { // só itera se não for null
+            for (EnderecoDTO enderecoDTO : enderecoDTOS) {
+                enderecos.add(paraEndereco(enderecoDTO));
+            }
+        }
+        return enderecos;
+
     }
 
 
@@ -74,7 +74,7 @@ public class UsuarioConverter {
                 .senha(usuario.getSenha())
                 .email(usuario.getEmail())
                 .telefone(paraListaTelefoneDTO(usuario.getTelefones()))
-                .endereco(paraListaEnderecoDTO(usuario.getEnderecos()))
+                .enderecos(paraListaEnderecoDTO(usuario.getEnderecos()))
                 .build();
     }
 
