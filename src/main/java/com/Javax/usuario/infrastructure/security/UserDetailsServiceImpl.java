@@ -1,7 +1,9 @@
 package com.Javax.usuario.infrastructure.security;
 
+
 import com.Javax.usuario.infrastructure.entity.Usuario;
 import com.Javax.usuario.infrastructure.repository.UsuarioRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -11,12 +13,8 @@ import org.springframework.stereotype.Service;
 public class UserDetailsServiceImpl implements UserDetailsService {
 
     // Repositório para acessar dados de usuário no banco de dados
-
-    private final UsuarioRepository usuarioRepository;
-
-    public UserDetailsServiceImpl(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
-    }
+    @Autowired
+    private UsuarioRepository usuarioRepository;
 
     // Implementação do método para carregar detalhes do usuário pelo e-mail
     @Override
