@@ -4,11 +4,12 @@ import lombok.*;
 
 import java.util.List;
 
-@Builder
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class UsuarioDTO {
 
     private String nome;
