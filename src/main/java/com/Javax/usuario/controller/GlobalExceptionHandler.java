@@ -1,5 +1,3 @@
-package com.Javax.usuario.controller;
-
 import com.Javax.usuario.infrastructure.exceptions.ConflictException;
 import com.Javax.usuario.infrastructure.exceptions.ResourceNotFoundException;
 import com.Javax.usuario.infrastructure.exceptions.UnauthorizedException;
@@ -7,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+
 
 @ControllerAdvice
 public class GlobalExceptionHandler {

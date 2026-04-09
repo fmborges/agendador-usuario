@@ -6,12 +6,14 @@ import com.Javax.usuario.business.dto.EnderecoDTO;
 import com.Javax.usuario.business.dto.TelefoneDTO;
 import com.Javax.usuario.business.dto.UsuarioDTO;
 import com.Javax.usuario.infrastructure.security.JwtUtil;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 @RequestMapping("/usuario")
